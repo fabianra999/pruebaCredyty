@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule} from '@angular/router'
+import { RouterModule } from '@angular/router'
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -9,8 +10,11 @@ import { MovieComponent } from './components/movie/movie.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { from } from 'rxjs';
 
-// Importat Rutas
+// Import routes
 import { ROUTES } from './app-routing.module';
+
+// Import Service
+import { NytimesService } from './services/nytimes.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +26,12 @@ import { ROUTES } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES, { useHash: true})
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES, { useHash: true })
   ],
-  providers: [],
+  providers: [
+    NytimesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

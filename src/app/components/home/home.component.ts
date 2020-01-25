@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NytimesService } from 'src/app/services/nytimes.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  newMovies: any[] = [];
+
+  constructor(private nytimes: NytimesService) {
+    this.nytimes.getNewReleases()
+      .subscribe((data: any) => {
+        console.log(data.results);
+        this.newMovies = data.results;
+      });
+  }
 
   ngOnInit() {
   }
