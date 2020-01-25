@@ -1,1 +1,9 @@
-<p>cards works!</p>
+<div class="card-columns">
+    <div class="card" *ngFor="let item of items">
+        <img [src]="item.multimedia | noImages" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"> {{item.display_title}}</h5>
+            <p class="card-text">{{item.summary_short}}</p>
+        </div>
+    </div>
+</div>

@@ -7,14 +7,6 @@
 
 <div class="row">
     <div class="col">
-        <div class="card-columns">
-            <div class="card" *ngFor="let iteds of searchResults">
-                <img [src]="iteds.multimedia | noImages" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"> {{iteds.display_title}}</h5>
-                    <p class="card-text">{{iteds.summary_short}}</p>
-                </div>
-            </div>
-        </div>
+        <app-cards [items]="searchResults"></app-cards>
     </div>
 </div>
