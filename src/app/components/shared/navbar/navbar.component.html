@@ -1,1 +1,21 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+        <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+        Navbar
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item " routerLinkActive="active">
+                <a class="nav-link" routerLink="home"> Home </a>
+            </li>
+            <li class="nav-item " routerLinkActive="active">
+                <a class="nav-link" routerLink="search"> Search </a>
+            </li>
+        </ul>
+    </div>
+</nav>
