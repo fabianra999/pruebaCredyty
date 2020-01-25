@@ -19,4 +19,13 @@ export class NytimesService {
     return this.http.get(url);
   }
 
+  getSearchMovie(searchData: string) {
+    const headers = new HttpHeaders({
+      'api-key': 'Icbm946pXJWEZ59ep2j4WQAHb4wdGAFu'
+    });
+    const url: string = `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${searchData}&api-key=Icbm946pXJWEZ59ep2j4WQAHb4wdGAFu`;
+
+    return this.http.get(url);
+  }
+
 }

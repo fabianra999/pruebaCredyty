@@ -1,1 +1,20 @@
-<p>search works!</p>
+<div class="row">
+    <div class="col">
+        <input type="text" name="" id="" #itemSearchMovie (keyup)="searchMovie(itemSearchMovie.value)"
+            placeholder="Buscar Pelicula">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="card-columns">
+            <div class="card" *ngFor="let item of searchResults">
+                <img [src]="item.multimedia.src" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> {{item.display_title}}</h5>
+                    <p class="card-text">{{item.summary_short}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
