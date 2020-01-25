@@ -1,6 +1,6 @@
 <div class="card-columns">
     <div class="card" *ngFor="let movie of newMovies">
-        <img [src]="movie.multimedia.src" class="card-img-top" alt="...">
+        <img [src]="movie.multimedia | noImages" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"> {{movie.display_title}}</h5>
             <p class="card-text">{{movie.summary_short}}</p>

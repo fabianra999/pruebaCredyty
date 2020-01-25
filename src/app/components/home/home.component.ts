@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
     this.nytimes.getNewReleases()
       .subscribe((data: any) => {
         console.log(data.results);
-        this.newMovies = data.results;
+        this.newMovies = data;
       });
   }
 

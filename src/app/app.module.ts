@@ -16,13 +16,19 @@ import { ROUTES } from './app-routing.module';
 // Import Service
 import { NytimesService } from './services/nytimes.service';
 
+// Pipes
+import { NoImagesPipe } from './pipes/no-images.pipe';
+import { CardsComponent } from './components/shared/cards/cards.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
     MovieComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoImagesPipe,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
