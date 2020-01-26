@@ -1,12 +1,40 @@
-<div class="row">
-    <div class="col">
-        <input type="text" name="" id="" #itemSearchMovie (keyup)="searchMovie(itemSearchMovie.value)"
-            placeholder="Buscar Pelicula">
-    </div>
-</div>
 
-<div class="row">
-    <div class="col">
-        <app-cards [items]="searchResults"></app-cards>
+
+
+<section class="page">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page__header mb-5">
+                    <div class="title mb-4">
+                        <h1>Find a review.</h1>
+                    </div>
+                    <div class="copy">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="form">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">search</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="search movie" aria-label="Username"
+                            #itemSearchMovie (keyup)="searchMovie(itemSearchMovie.value)"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="row">
+                    <div class="col">
+                        <app-cards [items]="searchResults"></app-cards>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
