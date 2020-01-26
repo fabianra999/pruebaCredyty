@@ -81,6 +81,24 @@
 }
 
 
+
+.item__data{
+    border-bottom: 1px solid #d6d6d6;
+    padding: 1rem;
+    margin: 1rem 0;
+    .title{
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    p{
+        font-size: .8rem; 
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
  .animated {
     animation-duration: 1s;
     animation-fill-mode: both;

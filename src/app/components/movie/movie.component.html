@@ -1,9 +1,51 @@
-<p>movie works!</p>
+<section class="page">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page__header mb-5">
+                    <div class="title mb-4">
+                        <h1>{{dataService.itemMovie.display_title}}.</h1>
+                    </div>
+                    <div class="copy">
+                        <p>{{dataService.itemMovie.summary_short}}</p>
+                    </div>
+                    <div class="form text-right">
+                        <button type="button" routerLink="home" class="btn btn-outline-dark">Volver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="copy">
+                    <div class="item__data">
+                        <div class="title">Title</div>
+                        <p>{{dataService.itemMovie.display_title}}</p>
+                    </div>
 
+                    <div class="item__data">
+                        <div class="title">Peadline</div>
+                        <p>{{dataService.itemMovie.headline}}</p>
+                    </div>
 
-<button type="button" routerLink="home" class="btn btn-outline-dark">Volver</button>
+                    <div class="item__data">
+                        <div class="title">Summary short</div>
+                        <p>{{dataService.itemMovie.summary_short}}</p>
+                    </div>
 
+                    <div class="item__data">
+                        <div class="title">By line</div>
+                        <p>{{dataService.itemMovie.byline}}</p>
+                    </div>
 
-<p>{{dataService.itemMovie.display_title}}</p>
-<p>{{dataService.itemMovie.headline}}</p>
-<img [src]="dataService.itemMovie.multimedia.src" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="item__data">
+                    <div class="title">Iamge</div>
+                    <img [src]="dataService.itemMovie.multimedia.src" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
