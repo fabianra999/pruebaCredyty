@@ -1,5 +1,5 @@
 <div class="card-columns">
-    <div class="card" *ngFor="let item of items">
+    <div (click)="seeReview(item)" class="card" *ngFor="let item of items">
         <img [src]="item.multimedia | noImages" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"> {{item.display_title}}</h5>
